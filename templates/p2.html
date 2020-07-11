@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title> Sunil Vashist - Freelance Python Django Developer</title>
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="../static/assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="../static/assets/css/owl.css" />
+    <link rel="stylesheet" href="../static/assets/css/lightbox.css" />
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="../static/assets/images/author-image.jpg" alt="not loading" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Sunil Vashist</h4>
+              <span>Python Expert</span>
+            </div>
+
+                <a href="index.html" style="color: white">Back to Home</a>
+
+          <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href=https://www.facebook.com/sanju.vashist.1507/"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/SunilVa56436534"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/sunil-vashist-45932b197/"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://github.com/sunilvashist"><i class="fa fa-dribbble"></i></a>
+                </li>
+<!--
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+-->
+                                                   <p>Copyright 2020 Sunil Vashist</p>
+              </ul>
+            </div>
+<!--
+            <div class="copyright-text">
+              <p>Copyright 2020 Sunil Vashist</p>
+            </div>
+-->
+          </div>
+        </div>
+      </div>    
+                                    
+ <section class="section contact-me" data-section="section4">
+      <div class="container">
+                         
+                 <pre class="line-numbers" style="color:WhiteSmoke">
+
+  <code class="language-css">
+    <h5><h3><strong>CUims Automation</strong></h3>
+Ideology:-:-
+
+Daily login to CUims and checking my attendance was getting me irritated. So to get rid of this<br/>I thought why should not make such a program which autologin to CUims and send me mail of my attendance <br/>summary till that date. It saves time and also helps me to track my attendance.
+
+Recently I learned Python, so I thought why should not make this in python. I searched on Google 
+that's there any module/library which can help me to implement my idea. I got a library named as <br/>selenium, which can automate the browser. Then I explored selenium and finally, I got the way to <br/>automate Cuims.
+
+I divided this into three parts:
+
+1. AutoLogin to Cuims and get the pdf downloaded into your Pc.
+2. Extract the latest downloaded attendance summary from the download folder or the download path.
+3. Send the attendance summary as an attachment through the mail.
+
+Modules Used :
+
+1. selenium
+2. datetime
+3. os
+4. email
+5. webdriver
+6. smtplib
+7. ssl
+8. requests
+9.wheel All modules need to be imported first before starting project
+
+Python 3.6 should be installed and set as virtual/ main environment.
+Prerequisite :
+
+python basic syntax Oops concept for better understanding. After successful implementation,it would<br/>send you the attendance summary through email. There are many functions to add to future scope.
+                            
+<p><strong>For mode details :</strong> <a href=https://github.com/sunilvashist/CUims-Automation.git>Get Source Code</a></p>
+                            </code>
+                            </pre></div>                                                                                          </section>           
+
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../static/assets/js/isotope.min.js"></script>
+    <script src="../static/assets/js/owl-carousel.js"></script>
+    <script src="../static/assets/js/lightbox.js"></script>
+    <script src="../static/assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
